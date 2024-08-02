@@ -7,8 +7,8 @@ import 'swiper/css/navigation';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { LiaCalendarSolid } from "react-icons/lia"
 import { Link } from 'react-router-dom';
-import Img from "../images/39_thumb.jpg"
-const NewsContainer = ()=> {
+import Img from "../images/teacher-woman-holding-empty-hand-260nw-693790735_QKw1ywm.webp"
+const TeacherContainer = ()=> {
   
     return (
         <div className='container'>
@@ -57,16 +57,11 @@ const NewsContainer = ()=> {
                                 <Link to={""}>
                                     <img src={Img} alt="" />
 
-
-                                    <h3 className='new_slider_card_content_header'>Abituriyentlər Üçün Psixoloji Seminar</h3>
-                                    <div className="new_slider_card_content">
-                                        <h3 >Abituriyentlər Üçün Psixoloji Seminar</h3>
-                                        <p>2 dekabr tarixində "Uğurun əldə edilməsi və Motivasiya " adlı seminarımız baş tutmuşdur.</p>
-                                        <div className='news_slider_card_end'>
-                                            <LiaCalendarSolid className='calendar' />
-                                            <span>2024-07-14</span>
-                                        </div>
-                                    </div>
+<h3>
+Esmer Nagizade
+</h3>
+                                        
+       <p>IT</p>                             
                                     </Link>
                             </SwiperSlide> 
                             </Swiper>
@@ -83,4 +78,5 @@ const NewsContainer = ()=> {
     )
 }
 
-export default NewsContainer
+
+export default TeacherContainer

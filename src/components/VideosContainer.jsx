@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
+
 import { Keyboard, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -8,9 +9,9 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { LiaCalendarSolid } from "react-icons/lia"
 import { Link } from 'react-router-dom';
 import Img from "../images/39_thumb.jpg"
-const NewsContainer = ()=> {
-  
-    return (
+const VideosContainer = () => {
+  return (
+    <div>
         <div className='container'>
             <Swiper
 
@@ -80,7 +81,10 @@ const NewsContainer = ()=> {
             </div>
         </div>
     
-    )
+
+
+    </div>
+  )
 }
 
-export default NewsContainer
+export default VideosContainer

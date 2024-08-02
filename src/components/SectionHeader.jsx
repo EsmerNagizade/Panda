@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const SectionHeader = () => {
+const SectionHeader = ({sectionH2,sectionlink}) => {
   return (
     <div className='section_header'>
-      <h2>Xəbərlər</h2>
-    <Link to={""}>Kursumuz haqqında ən son yenilikləri xəbərlər bölməsindən izləyin!</Link>
+      <h2>{sectionH2}</h2>
+    <Link to={""}>{sectionlink}</Link>
 
 
     </div>

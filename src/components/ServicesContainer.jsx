@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { Keyboard, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -7,11 +7,11 @@ import 'swiper/css/navigation';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { LiaCalendarSolid } from "react-icons/lia"
 import { Link } from 'react-router-dom';
-import Img from "../images/39_thumb.jpg"
-const NewsContainer = ()=> {
-  
-    return (
-        <div className='container'>
+import Img from "../images/Edusoft-the-English-Language-Learning-Experts.jpg"
+const ServicesContainer = () => {
+  return (
+    <div>
+      <div className='container'>
             <Swiper
 
            
@@ -58,15 +58,12 @@ const NewsContainer = ()=> {
                                     <img src={Img} alt="" />
 
 
-                                    <h3 className='new_slider_card_content_header'>Abituriyentlər Üçün Psixoloji Seminar</h3>
-                                    <div className="new_slider_card_content">
-                                        <h3 >Abituriyentlər Üçün Psixoloji Seminar</h3>
-                                        <p>2 dekabr tarixində "Uğurun əldə edilməsi və Motivasiya " adlı seminarımız baş tutmuşdur.</p>
-                                        <div className='news_slider_card_end'>
-                                            <LiaCalendarSolid className='calendar' />
-                                            <span>2024-07-14</span>
-                                        </div>
-                                    </div>
+                                
+                                  
+                                 
+                                        <p>Ingilis dili</p>
+                                      
+                              
                                     </Link>
                             </SwiperSlide> 
                             </Swiper>
@@ -79,8 +76,11 @@ const NewsContainer = ()=> {
                 </div>
             </div>
         </div>
-    
-    )
+
+
+    </div>
+  )
 }
 
-export default NewsContainer
+export default ServicesContainer
+

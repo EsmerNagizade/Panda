@@ -6,8 +6,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import ImgSlide from "../images/event6.jpg";
 import ImgSlide1 from "../images/3.jpg";
+import { useDispatch, useSelector } from 'react-redux';
+import { getBannerList } from '../action/MainAction';
+import { useEffect } from 'react';
 
 const SliderHeaderContainer = () => {
+const dispatch=useDispatch()
+const {Banner}=useSelector(state=>state.Data)
+console.log(Banner);
+    useEffect(()=>{
+dispatch(getBannerList())
+    },[dispatch])
     return (            
         <div className='header_slider_parent_cards_container'>
             <Swiper
@@ -22,57 +31,37 @@ const SliderHeaderContainer = () => {
                 modules={[Keyboard, Pagination, Navigation, EffectFade]}
                 className="mySwiper header_slider_cards_container"
             >
-                <SwiperSlide 
+                {
+                    Banner?.map((data,i)=>{
+                        return(
+                            <>
+                          
+{
+data?.is_active?
+
+                <SwiperSlide key={i}
                     style={{
-                        backgroundImage: `url(${ImgSlide})`,
+                        backgroundImage: `url(${data?.image})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }} 
                     className='header_slider_card'
                 >
-                    <div className="header_slider_bg_shadow">
-                        <div className="header_main_flex_container  ">
+                    <div className="header_slider_bg_shadow ">
+                        <div className="header_main_flex_container container  ">
                             <div className='header_middle_container_content'>
-                            <h1 className='header_one'>Balacani getirin , dahini aparin</h1>
+                            <h1 className='header_one'>{data?.title}</h1>
                             </div>
                         </div>
                     </div>
-                </SwiperSlide>
-                <SwiperSlide 
-                    style={{
-                        backgroundImage: `url(${ImgSlide1})`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                    }} 
-                    className='header_slider_card'
-                >
-                    <div className="header_slider_bg_shadow">
-                        <div className="header_main_flex_container  ">
-                            <div className='header_middle_container_content'>
-                                <h1 className='header_one'>Balacani getirin.Dahini aparin</h1>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide 
-                    style={{
-                        backgroundImage: `url(${ImgSlide})`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                    }} 
-                    className='header_slider_card'
-                >
-                    <div className="header_slider_bg_shadow">
-                        <div className="header_main_flex_container ">
-                            <div className='header_middle_container_content'>
-                            <h1 className='header_one'>Balacani getirin.Dahini aparin</h1>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                </SwiperSlide>:null
+}
+</> )
+
+                    })
+                }
+             
             </Swiper>
         </div>
     );
